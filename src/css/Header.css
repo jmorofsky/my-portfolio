@@ -1,0 +1,127 @@
+@font-face {
+  font-family: 'RobotoMono';
+  src        : url('../fonts/Roboto_Mono/static/RobotoMono-Medium.ttf');
+}
+
+.wrapper {
+  height         : 10vh;
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+}
+
+.typing-effect {
+  width       : 13ch;
+  animation   : typing 1.25s steps(13), blink .1s step-end 14 alternate;
+  white-space : nowrap;
+  overflow    : hidden;
+  border-right: 0.1em solid transparent;
+  font-family : 'RobotoMono', monospace;
+  font-size   : calc(20px + 7vw);
+  color       : #fff;
+  margin-top  : 50vh;
+}
+
+.typing-effect-small {
+  opacity            : 0;
+  width              : 19ch;
+  animation          : typing 1.25s steps(19), blink .1s step-end 14 alternate;
+  animation-delay    : 2s;
+  animation-fill-mode: forwards;
+  white-space        : nowrap;
+  overflow           : hidden;
+  border-right       : 0.1em solid transparent;
+  font-family        : 'RobotoMono', monospace;
+  font-size          : calc(16px + 3vw);
+  color              : #fff;
+  margin-top         : 50vh;
+}
+
+@keyframes typing {
+  0% {
+    opacity: 100%;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: #fff
+  }
+}
+
+header {
+  background-color: #363636;
+  height          : 100vh;
+  min-height      : 100vh;
+}
+
+div {
+  text-align: center;
+}
+
+ul {
+  opacity            : 0;
+  list-style-type    : none;
+  margin             : auto;
+  animation          : fadeInDown 1s steps(50);
+  animation-delay    : 3.75s;
+  animation-fill-mode: forwards;
+}
+
+li {
+  padding: 0 15px;
+  display: inline;
+}
+
+img {
+  max-width       : 100%;
+  height          : auto;
+  background-color: #363636;
+  border          : 5px solid #363636;
+}
+
+img:hover {
+  background-color: #2e2e2e;
+  border          : 5px solid #2e2e2e;
+  border-radius   : 15px;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity  : 0;
+    transform: translateY(-25px);
+  }
+
+  100% {
+    opacity  : 1;
+    transform: translateY(0);
+  }
+}
+
+.arrow {
+  opacity            : 0;
+  margin-left        : 43px;
+  margin-top         : 70vh;
+  animation          : fadeIn 1.5s 3.75s steps(50);
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* bootstrap for responsive site */
