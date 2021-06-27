@@ -19,7 +19,7 @@
   font-family : 'RobotoMono', monospace;
   font-size   : calc(20px + 7vw);
   color       : #fff;
-  margin-top  : 50vh;
+  margin-top  : calc(60vh + 100px);
 }
 
 .typing-effect-small {
@@ -34,7 +34,17 @@
   font-family        : 'RobotoMono', monospace;
   font-size          : calc(16px + 3vw);
   color              : #fff;
-  margin-top         : 50vh;
+  margin-top         : calc(50vh + 200px);
+}
+
+@media screen and (min-width: 1600px) {
+  .typing-effect {
+    font-size: calc(20px + 4vw);
+  }
+
+  .typing-effect-small {
+    font-size: calc(16px + 2vw);
+  }
 }
 
 @keyframes typing {
@@ -59,8 +69,9 @@
 
 header {
   background-color: #363636;
-  height          : 100vh;
-  min-height      : 100vh;
+  height          : 100%;
+  min-height      : 100%;
+  padding-bottom  : 13px;
 }
 
 div {
@@ -70,7 +81,8 @@ div {
 ul {
   opacity            : 0;
   list-style-type    : none;
-  margin             : auto;
+  margin             : 65vh auto 0;
+  margin-top         : calc(55vh + 100px);
   animation          : fadeInDown 1s steps(50);
   animation-delay    : 3.75s;
   animation-fill-mode: forwards;
@@ -109,7 +121,7 @@ img:hover {
 .arrow {
   opacity            : 0;
   margin-left        : 43px;
-  margin-top         : 70vh;
+  margin-top         : calc(5vh + 20px);
   animation          : fadeIn 1.5s 3.75s steps(50);
   animation-fill-mode: forwards;
 }

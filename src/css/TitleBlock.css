@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'RobotoMono';
+    src        : url('../fonts/Roboto_Mono/static/RobotoMono-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'KoHo';
+    src        : url('../fonts/KoHo/KoHo-Regular.ttf');
+}
+
+.typing-effect-title {
+    font-family: 'RobotoMono', monospace;
+}
+
+h2 {
+    font-family: 'KoHo', sans-serif;
+}
