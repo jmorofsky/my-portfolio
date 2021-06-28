@@ -1,6 +1,11 @@
 @font-face {
     font-family: 'KoHo';
-    src        : url('../fonts/KoHo/KoHo-Regular.ttf');
+    src        : url('../fonts/KoHo/KoHo-ExtraLight.ttf');
+}
+
+@font-face {
+    font-family: 'Source';
+    src        : url('../fonts/Source_Code_Pro/SourceCodePro-ExtraLight.ttf');
 }
 
 .typing-effect-title {
@@ -29,7 +34,7 @@
 }
 
 .lineTwo {
-    font-family     : 'KoHo', sans-serif;
+    font-family     : 'Source', monospace;
     color           : #fff;
     background-color: #000;
     margin-top      : 0;
@@ -60,17 +65,11 @@
 
 .titleBlock {
     margin-top : 7vh;
-    margin-left: calc(20vw - 100px);
+    margin-left: 0;
 }
 
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 1300px) {
     .titleBlock {
-        margin-left: calc(25vw - 50px);
-    }
-}
-
-@media screen and (max-width: 1100px) {
-    .titleBlock {
-        margin-left: 0;
+        margin-left: calc(50vw - 650px);
     }
 }

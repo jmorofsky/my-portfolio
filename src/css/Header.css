@@ -17,7 +17,7 @@
   overflow    : hidden;
   border-right: 0.1em solid transparent;
   font-family : 'RobotoMono', monospace;
-  font-size   : calc(20px + 7vw);
+  font-size   : calc(30px + 5vw);
   color       : #fff;
   margin-top  : calc(60vh + 100px);
 }
@@ -32,19 +32,9 @@
   overflow           : hidden;
   border-right       : 0.1em solid transparent;
   font-family        : 'RobotoMono', monospace;
-  font-size          : calc(16px + 3vw);
+  font-size          : calc(20px + 2vw);
   color              : #fff;
   margin-top         : calc(50vh + 200px);
-}
-
-@media screen and (min-width: 1600px) {
-  .typing-effect {
-    font-size: calc(20px + 4vw);
-  }
-
-  .typing-effect-small {
-    font-size: calc(16px + 2vw);
-  }
 }
 
 @keyframes typing {
