@@ -19,15 +19,15 @@ class Header extends React.Component {
                 <ul>
                     <li>
                         <a href="mailto:contact@jasonmorofsky.com">
-                            <img src={email} alt="Email me"/></a>
+                            <img src={email} alt="Email me" className='contact-buttons'/></a>
                     </li>
                     <li>
                         <a href="https://github.com/jmorofsky">
-                            <img src={github} alt="My Github account"/></a>
+                            <img src={github} alt="My Github account" className='contact-buttons'/></a>
                     </li>
                     <li>
                         <a href="http://www.linkedin.com/in/jason-morofsky">
-                            <img src={linkedin} alt="My LinkedIn profile"/></a>
+                            <img src={linkedin} alt="My LinkedIn profile" className='contact-buttons'/></a>
                     </li>
                 </ul>
 

@@ -1,17 +1,76 @@
 @font-face {
-    font-family: 'RobotoMono';
-    src        : url('../fonts/Roboto_Mono/static/RobotoMono-Medium.ttf');
-}
-
-@font-face {
     font-family: 'KoHo';
     src        : url('../fonts/KoHo/KoHo-Regular.ttf');
 }
 
 .typing-effect-title {
-    font-family: 'RobotoMono', monospace;
+    font-family  : 'RobotoMono', monospace;
+    color        : #fff;
+    width        : 11ch;
+    animation    : typing 0.75s steps(13), blink .1s step-end 8 alternate;
+    white-space  : nowrap;
+    overflow     : hidden;
+    border-right : 0.1em solid transparent;
+    padding      : 5px;
+    margin-bottom: 0;
+    font-size    : 48px;
 }
 
-h2 {
-    font-family: 'KoHo', sans-serif;
+.typing-effect-title-static {
+    font-family  : 'RobotoMono', monospace;
+    color        : #fff;
+    width        : 11ch;
+    white-space  : nowrap;
+    overflow     : hidden;
+    border-right : 0.1em solid transparent;
+    padding      : 5px;
+    margin-bottom: 0;
+    font-size    : 48px;
+}
+
+.lineTwo {
+    font-family     : 'KoHo', sans-serif;
+    color           : #fff;
+    background-color: #000;
+    margin-top      : 0;
+    text-align      : left;
+    padding         : 0 0 5px 5px;
+    font-size       : 30px;
+}
+
+@keyframes typing {
+    0% {
+        opacity: 100%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+
+    from {
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: #fff
+    }
+}
+
+.titleBlock {
+    margin-top : 7vh;
+    margin-left: calc(20vw - 100px);
+}
+
+@media screen and (min-width: 1500px) {
+    .titleBlock {
+        margin-left: calc(25vw - 50px);
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .titleBlock {
+        margin-left: 0;
+    }
 }

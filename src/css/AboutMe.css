@@ -1,5 +1,66 @@
 .bg {
     background-color: #661726;
-    padding: 1px 0;
+    padding         : 1px 0;
 }
 
+.about-me-container {
+    display        : flex;
+    justify-content: center;
+    padding        : 15px 5vw 3vw;
+    margin-left    : calc(15vw - 100px);
+    overflow-x     : hidden;
+    max-width      : 100%;
+}
+
+.fpu {
+    margin-right: 50px;
+    width       : 500px;
+    height      : 751px;
+}
+
+.pgh-container {
+    display       : flex;
+    flex-direction: column;
+}
+
+.about-p {
+    font-family: 'KoHo', sans-serif;
+    color      : #fff;
+    font-size  : 24px;
+    text-align : left;
+}
+
+@media screen and (max-width: 1100px) {
+    .about-me-container {
+        display     : block;
+        margin-right: 10vw;
+        margin-left : calc(15vw - 75px);
+    }
+
+    .about-me-container {
+        padding: 15px 0 3vw;
+    }
+
+    .about-p {
+        padding: 0 40px;
+        text-align: justify;
+    }
+
+    .fpu {
+        margin-right: 0;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .about-me-container {
+        margin-left : calc(20vw - 50px);
+        margin-right: calc(20vw - 100px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .about-me-container {
+        margin-right: 0;
+        padding-right: 10px;
+    }
+}

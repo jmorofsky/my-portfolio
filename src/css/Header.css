@@ -93,14 +93,14 @@ li {
   display: inline;
 }
 
-img {
+.contact-buttons {
   max-width       : 100%;
   height          : auto;
   background-color: #363636;
   border          : 5px solid #363636;
 }
 
-img:hover {
+.contact-buttons:hover {
   background-color: #2e2e2e;
   border          : 5px solid #2e2e2e;
   border-radius   : 15px;
@@ -124,6 +124,13 @@ img:hover {
   margin-top         : calc(5vh + 20px);
   animation          : fadeIn 1.5s 3.75s steps(50);
   animation-fill-mode: forwards;
+  border          : 5px solid #363636;
+}
+
+.arrow:hover {
+  background-color: #2e2e2e;
+  border          : 5px solid #2e2e2e;
+  border-radius   : 15px;
 }
 
 @keyframes fadeIn {
@@ -135,6 +142,3 @@ img:hover {
     opacity: 1;
   }
 }
-
-/* bootstrap for responsive site */
-/* add bootstrap and sass scss to resume */
