@@ -68,7 +68,7 @@ div {
   text-align: center;
 }
 
-ul {
+.header-ul {
   opacity            : 0;
   list-style-type    : none;
   margin             : 65vh auto 0;
@@ -78,7 +78,7 @@ ul {
   animation-fill-mode: forwards;
 }
 
-li {
+.header-li {
   padding: 0 15px;
   display: inline;
 }
@@ -114,7 +114,7 @@ li {
   margin-top         : calc(5vh + 20px);
   animation          : fadeIn 1.5s 3.75s steps(50);
   animation-fill-mode: forwards;
-  border          : 5px solid #363636;
+  border             : 5px solid #363636;
 }
 
 .arrow:hover {

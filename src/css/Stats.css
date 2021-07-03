@@ -1,0 +1,64 @@
+.stats-bg {
+    background-color: #363636;
+    padding         : 1px 0;
+}
+
+.stats-container {
+    margin         : 0;
+    color          : #fff;
+    list-style-type: none;
+}
+
+.stats-header {
+    display        : flex;
+    justify-content: space-between;
+    align-items    : flex-end;
+}
+
+.refreshArrow {
+    width        : 48px;
+    height       : 48px;
+    margin-right : 10vw;
+    margin-bottom: max(2vh, 35px);
+    border       : 3px solid #363636;
+    border-radius: 30px;
+}
+
+.refreshArrow:hover {
+    background-color: #2e2e2e;
+    border          : 3px solid #2e2e2e;
+    border-radius   : 30px;
+}
+
+.refreshArrowLoading {
+    width        : 48px;
+    height       : 48px;
+    margin-right : 10vw;
+    margin-bottom: max(2vh, 35px);
+    animation    : rotation 1.5s infinite ease-out;
+    border       : 3px solid #363636;
+    border-radius: 30px;
+}
+
+.refreshArrowLoading:hover {
+    background-color: #2e2e2e;
+    border          : 3px solid #2e2e2e;
+    border-radius   : 30px;
+}
+
+@keyframes rotation {
+    20% {
+        animation-timing-function: ease-in;
+        transform                : rotate(0deg);
+    }
+
+    60% {
+        animation-timing-function: ease-out;
+        transform                : rotate(180deg);
+    }
+
+    100% {
+        animation-timing-function: ease-out;
+        transform                : rotate(359deg);
+    }
+}

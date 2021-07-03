@@ -11,7 +11,6 @@
 .typing-effect-title {
     font-family  : 'RobotoMono', monospace;
     color        : #fff;
-    width        : 11ch;
     animation    : typing 0.75s steps(13), blink .1s step-end 8 alternate;
     white-space  : nowrap;
     overflow     : hidden;
@@ -24,7 +23,6 @@
 .typing-effect-title-static {
     font-family  : 'RobotoMono', monospace;
     color        : #fff;
-    width        : 11ch;
     white-space  : nowrap;
     overflow     : hidden;
     border-right : 0.1em solid transparent;
@@ -40,7 +38,7 @@
     margin-top      : 0;
     text-align      : left;
     padding         : 0 0 5px 5px;
-    font-size       : 30px;
+    font-size       : 20px;
 }
 
 @keyframes typing {

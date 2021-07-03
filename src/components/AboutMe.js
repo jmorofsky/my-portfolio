@@ -7,7 +7,7 @@ class AboutMe extends React.Component {
     render() {
         return (
             <div className="bg" id="about-me">
-                <TitleBlock lineOne='// About Me' lineTwo='I ♥ code!' />
+                <TitleBlock lineOne='// About Me' lineTwo='I ♥ code!'/>
                 <div className="about-me-container">
                     <img src={fpu} alt='FPU main building' className='fpu' />
                     <div className='pgh-container'>
@@ -20,7 +20,7 @@ class AboutMe extends React.Component {
                             experience design.</p>
                         <p className='about-p'>&emsp; With my experience in React, Node, and RESTful APIs as well
                             as knowledge of agile methodology and workflow management tools like Jira, I know I
-                            will be an asset to the front-end of any application.</p>
+                            will be an asset to the front-end development of any application.</p>
                     </div>
                 </div>
             </div>

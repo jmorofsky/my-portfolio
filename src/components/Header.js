@@ -16,17 +16,17 @@ class Header extends React.Component {
                     <h2 className="typing-effect-small">Front-end Developer</h2>
                 </div>
 
-                <ul>
-                    <li>
-                        <a href="mailto:contact@jasonmorofsky.com">
+                <ul className='header-ul'>
+                    <li className='header-li'>
+                        <a href="mailto:contact@jasonmorofsky.com" title='Email Me'>
                             <img src={email} alt="Email me" className='contact-buttons'/></a>
                     </li>
-                    <li>
-                        <a href="https://github.com/jmorofsky">
-                            <img src={github} alt="My Github account" className='contact-buttons'/></a>
+                    <li className='header-li'>
+                        <a href="https://github.com/jmorofsky" title='My GitHub Profile'>
+                            <img src={github} alt="My GitHub Profile" className='contact-buttons'/></a>
                     </li>
-                    <li>
-                        <a href="http://www.linkedin.com/in/jason-morofsky">
+                    <li className='header-li'>
+                        <a href="http://www.linkedin.com/in/jason-morofsky" title='My LinkedIn Profile'>
                             <img src={linkedin} alt="My LinkedIn profile" className='contact-buttons'/></a>
                     </li>
                 </ul>
