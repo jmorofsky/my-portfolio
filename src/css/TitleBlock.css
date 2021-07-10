@@ -18,6 +18,7 @@
     padding      : 5px;
     margin-bottom: 0;
     font-size    : 48px;
+    transition   : all .7s ease-in-out;
 }
 
 .typing-effect-title-static {
@@ -29,6 +30,7 @@
     padding      : 5px;
     margin-bottom: 0;
     font-size    : 48px;
+    transition   : all .7s ease-in-out;
 }
 
 .lineTwo {
@@ -39,6 +41,7 @@
     text-align      : left;
     padding         : 0 0 5px 5px;
     font-size       : 20px;
+    transition      : all .7s ease-in-out;
 }
 
 @keyframes typing {
@@ -69,5 +72,19 @@
 @media screen and (min-width: 1300px) {
     .titleBlock {
         margin-left: calc(50vw - 650px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .typing-effect-title {
+        font-size: 30px;
+    }
+
+    .typing-effect-title-static {
+        font-size: 30px;
+    }
+
+    .lineTwo {
+        font-size: 16px;
     }
 }

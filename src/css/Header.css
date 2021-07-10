@@ -72,7 +72,7 @@ div {
   opacity            : 0;
   list-style-type    : none;
   margin             : 65vh auto 0;
-  margin-top         : calc(55vh + 100px);
+  margin-top         : max(60vh, 250px);
   animation          : fadeInDown 1s steps(50);
   animation-delay    : 3.75s;
   animation-fill-mode: forwards;
@@ -88,6 +88,7 @@ div {
   height          : auto;
   background-color: #363636;
   border          : 5px solid #363636;
+  transition      : all .2s ease-in-out;
 }
 
 .contact-buttons:hover {
@@ -111,16 +112,10 @@ div {
 .arrow {
   opacity            : 0;
   margin-left        : 43px;
-  margin-top         : calc(5vh + 20px);
+  margin-top         : calc(5vh + 10px);
   animation          : fadeIn 1.5s 3.75s steps(50);
   animation-fill-mode: forwards;
   border             : 5px solid #363636;
-}
-
-.arrow:hover {
-  background-color: #2e2e2e;
-  border          : 5px solid #2e2e2e;
-  border-radius   : 15px;
 }
 
 @keyframes fadeIn {
