@@ -14,13 +14,18 @@ a {
     margin-left    : 0;
 }
 
+.parallax {
+    height: 751px;
+}
+
 .fpu {
     margin-right: 50px;
-    width       : 500px;
+    width       : 1500px;
+    min-width   : 483px;
     height      : 751px;
 }
 
-.pgh-container {
+.txt-container {
     display       : flex;
     flex-direction: column;
 }
@@ -46,11 +51,11 @@ a {
     }
 
     .fpu {
-        margin: 0 auto;
-        max-width: 100%;
+        margin   : 0 auto;
+        max-width: 483px;
     }
 
-    .pgh-container {
+    .txt-container {
         padding: 0 30px;
     }
 }

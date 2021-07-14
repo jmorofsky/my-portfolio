@@ -3,6 +3,7 @@ import requests
 import os
 import csv
 from datetime import datetime
+from pytz import timezone
 from google.cloud import storage
 
 def fetchstats(event, context):
@@ -70,7 +71,8 @@ def fetchstats(event, context):
      stats.append(stat(7, 'Agile Certification', 1))
 
      # get date and time
-     today = datetime.now()
+     tz = timezone('US/Eastern')
+     today = datetime.now(tz)
      formattedDate = today.strftime("%m/%d/%Y %H:%M")
      stats.append(stat(8, "Last update: ", formattedDate))
 

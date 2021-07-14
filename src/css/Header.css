@@ -1,40 +1,140 @@
-@font-face {
-  font-family: 'RobotoMono';
-  src        : url('../fonts/Roboto_Mono/static/RobotoMono-Medium.ttf');
+header {
+  background-color: #363636;
+  height          : 100vh;
+  min-height      : 410px;
+  padding-bottom  : 13px;
+  position        : relative;
+}
+
+div {
+  text-align: center;
 }
 
 .wrapper {
-  height         : 10vh;
   display        : flex;
   align-items    : center;
   justify-content: center;
 }
 
 .typing-effect {
-  width       : 13ch;
-  animation   : typing 1.25s steps(13), blink .1s step-end 14 alternate;
-  white-space : nowrap;
-  overflow    : hidden;
-  border-right: 0.1em solid transparent;
-  font-family : 'RobotoMono', monospace;
-  font-size   : calc(30px + 5vw);
-  color       : #fff;
-  margin-top  : calc(60vh + 100px);
+  width        : 13ch;
+  animation    : typing 1.25s steps(13), blink .1s step-end 14 alternate;
+  white-space  : nowrap;
+  overflow     : hidden;
+  border-right : 0.1em solid transparent;
+  font-family  : 'LiberationMono';
+  font-size    : 125px;
+  color        : #fff;
+  margin-top   : calc(100vh - 870px);
+  margin-bottom: 0;
 }
 
 .typing-effect-small {
   opacity            : 0;
-  width              : 19ch;
-  animation          : typing 1.25s steps(19), blink .1s step-end 14 alternate;
+  width              : 18ch;
+  animation          : typing 1.25s steps(18), blink .1s step-end 14 alternate;
   animation-delay    : 2s;
   animation-fill-mode: forwards;
   white-space        : nowrap;
   overflow           : hidden;
   border-right       : 0.1em solid transparent;
-  font-family        : 'RobotoMono', monospace;
-  font-size          : calc(20px + 2vw);
+  font-family        : 'LiberationMono';
+  font-size          : 60px;
   color              : #fff;
-  margin-top         : calc(50vh + 200px);
+  margin-top         : 10px;
+}
+
+.header-ul {
+  opacity            : 0;
+  list-style-type    : none;
+  animation          : fadeInDown 1s steps(50);
+  animation-delay    : 3.75s;
+  animation-fill-mode: forwards;
+  padding            : 0;
+  position           : absolute;
+  bottom             : 110px;
+  left               : 0;
+  right              : 0;
+  margin             : 0 auto;
+}
+
+.header-li {
+  padding: 0;
+  display: inline;
+  margin : 0;
+}
+
+.contact-buttons {
+  width           : 45px;
+  background-color: #363636;
+  transition      : all .2s ease-in-out;
+  margin-left     : 25px;
+  margin-right    : 25px;
+  padding         : 10px;
+}
+
+.contact-buttons:hover {
+  background-color: #2e2e2e;
+  border-radius   : 50%;
+  transform       : translateY(-5px);
+}
+
+.linkedIn {
+  width           : 60px;
+  background-color: #363636;
+  transition      : all .2s ease-in-out;
+  margin-left     : 25px;
+  margin-right    : 25px;
+  padding         : 2px;
+}
+
+.linkedIn:hover {
+  background-color: #2e2e2e;
+  border-radius   : 50%;
+  transform       : translateY(-5px);
+}
+
+.arrow {
+  opacity               : 0;
+  margin                : 0 auto;
+  position              : absolute;
+  bottom                : 35px;
+  left                  : 0;
+  right                 : 0;
+  margin-top            : 35px;
+  animation             : fadeIn 1.5s 3.75s steps(50);
+  animation-fill-mode   : forwards;
+  width                 : 50px;
+}
+
+.preview {
+  display         : block;
+  z-index         : 100;
+  position        : absolute;
+  bottom          : 200px;
+  left            : 0;
+  right           : 0;
+  margin          : 0 auto;
+  animation       : preview 0.5s;
+  transform-origin: bottom;
+  box-shadow      : 0 0 5px 1px #111;
+  max-width       : 96.6vw;
+}
+
+@media screen and (max-height: 870px) {
+  .typing-effect {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .typing-effect {
+    font-size: 12vw;
+  }
+
+  .typing-effect-small {
+    font-size: 5.7vw;
+  }
 }
 
 @keyframes typing {
@@ -57,46 +157,6 @@
   }
 }
 
-header {
-  background-color: #363636;
-  height          : 100%;
-  min-height      : 100%;
-  padding-bottom  : 13px;
-}
-
-div {
-  text-align: center;
-}
-
-.header-ul {
-  opacity            : 0;
-  list-style-type    : none;
-  margin             : 65vh auto 0;
-  margin-top         : max(60vh, 250px);
-  animation          : fadeInDown 1s steps(50);
-  animation-delay    : 3.75s;
-  animation-fill-mode: forwards;
-}
-
-.header-li {
-  padding: 0 15px;
-  display: inline;
-}
-
-.contact-buttons {
-  max-width       : 100%;
-  height          : auto;
-  background-color: #363636;
-  border          : 5px solid #363636;
-  transition      : all .2s ease-in-out;
-}
-
-.contact-buttons:hover {
-  background-color: #2e2e2e;
-  border          : 5px solid #2e2e2e;
-  border-radius   : 15px;
-}
-
 @keyframes fadeInDown {
   0% {
     opacity  : 0;
@@ -109,15 +169,6 @@ div {
   }
 }
 
-.arrow {
-  opacity            : 0;
-  margin-left        : 43px;
-  margin-top         : calc(5vh + 10px);
-  animation          : fadeIn 1.5s 3.75s steps(50);
-  animation-fill-mode: forwards;
-  border             : 5px solid #363636;
-}
-
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -125,5 +176,15 @@ div {
 
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes preview {
+  0% {
+    transform: scale(0)
+  }
+
+  100% {
+    transform: scale(1)
   }
 }

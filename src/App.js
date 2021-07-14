@@ -1,5 +1,6 @@
 import React from 'react';
 import './css/App.css';
+import './css/fonts.css'
 import Header from './components/Header'
 import AboutMe from './components/AboutMe'
 import Stats from './components/Stats'

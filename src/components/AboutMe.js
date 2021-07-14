@@ -2,15 +2,18 @@ import React from "react"
 import '../css/AboutMe.css'
 import TitleBlock from "./TitleBlock"
 import fpu from '../images/fpu.png'
+import { Parallax } from 'react-parallax'
 
 class AboutMe extends React.Component {
     render() {
         return (
             <div className="bg" id="about-me">
-                <TitleBlock lineOne='// About Me' lineTwo='I ♥ code!'/>
+                <TitleBlock lineOne='// About Me' lineTwo='I ♥ code!' />
                 <div className="about-me-container">
-                    <img src={fpu} alt='FPU main building' className='fpu' />
-                    <div className='pgh-container'>
+                    <Parallax strength={150} bgImage={fpu} className='fpu'>
+                            <div className='parallax'></div>
+                    </Parallax>
+                    <div className='txt-container'>
                         <p className='about-p'>&emsp; Hi, I’m Jason Morofsky, a Computer Science graduate
                             from <a href='https://floridapoly.edu/'>Florida Polytechnic University.</a> I love all
                             things technology, especially if it has to do with software development and

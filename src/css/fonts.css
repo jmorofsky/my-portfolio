@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'LiberationMono';
+    src        : url('../fonts/Liberation_Mono/LiberationMono-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'KoHo';
+    src        : url('../fonts/KoHo/KoHo-ExtraLight.ttf');
+}
+
+@font-face {
+    font-family: 'Source';
+    src        : url('../fonts/Source_Code_Pro/SourceCodePro-ExtraLight.ttf');
+}

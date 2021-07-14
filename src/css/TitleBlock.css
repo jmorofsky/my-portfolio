@@ -1,35 +1,25 @@
-@font-face {
-    font-family: 'KoHo';
-    src        : url('../fonts/KoHo/KoHo-ExtraLight.ttf');
-}
-
-@font-face {
-    font-family: 'Source';
-    src        : url('../fonts/Source_Code_Pro/SourceCodePro-ExtraLight.ttf');
-}
-
 .typing-effect-title {
-    font-family  : 'RobotoMono', monospace;
+    font-family  : 'LiberationMono';
     color        : #fff;
     animation    : typing 0.75s steps(13), blink .1s step-end 8 alternate;
     white-space  : nowrap;
     overflow     : hidden;
     border-right : 0.1em solid transparent;
-    padding      : 5px;
+    padding      : 15px 5px 5px 5px;
     margin-bottom: 0;
-    font-size    : 48px;
+    font-size    : 60px;
     transition   : all .7s ease-in-out;
 }
 
 .typing-effect-title-static {
-    font-family  : 'RobotoMono', monospace;
+    font-family  : 'LiberationMono';
     color        : #fff;
     white-space  : nowrap;
     overflow     : hidden;
     border-right : 0.1em solid transparent;
-    padding      : 5px;
+    padding      : 15px 5px 5px 5px;
     margin-bottom: 0;
-    font-size    : 48px;
+    font-size    : 60px;
     transition   : all .7s ease-in-out;
 }
 
@@ -39,8 +29,8 @@
     background-color: #000;
     margin-top      : 0;
     text-align      : left;
-    padding         : 0 0 5px 5px;
-    font-size       : 20px;
+    padding         : 0 0 15px 5px;
+    font-size       : 18px;
     transition      : all .7s ease-in-out;
 }
 
@@ -60,7 +50,7 @@
 
 @keyframes blink {
     50% {
-        border-color: #fff
+        border-color: #fff;
     }
 }
 
@@ -77,11 +67,11 @@
 
 @media screen and (max-width: 600px) {
     .typing-effect-title {
-        font-size: 30px;
+        font-size: 32px;
     }
 
     .typing-effect-title-static {
-        font-size: 30px;
+        font-size: 32px;
     }
 
     .lineTwo {
