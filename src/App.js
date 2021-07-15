@@ -5,6 +5,7 @@ import Header from './components/Header'
 import AboutMe from './components/AboutMe'
 import Stats from './components/Stats'
 import Skills from './components/Skills'
+import Awards from './components/Awards';
 
 class App extends React.Component {
   render() {
@@ -14,6 +15,7 @@ class App extends React.Component {
         <AboutMe />
         <Stats />
         <Skills />
+        <Awards />
       </div>
     )
   }

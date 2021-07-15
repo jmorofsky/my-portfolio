@@ -1,0 +1,51 @@
+.awards-container {
+    display        : flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.awardsImg-container {
+    display       : flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.awards-caption {
+    font-family     : 'KoHo', sans-serif;
+    color           : #fff;
+    font-size       : 24px;
+    background-color: #2e2e2e;
+    margin          : 0;
+    padding         : 10px 0;
+}
+
+.awards-txt {
+    font-family: 'KoHo', sans-serif;
+    color      : #fff;
+    font-size  : 24px;
+    text-align : justify;
+    margin: 20px 50px 0;
+}
+
+@media screen and (min-width: 1300px) {
+    .awards-container {
+        margin-left : calc(50vw - 650px);
+        margin-right: calc(50vw - 650px);
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .awards-container {
+        display: block;
+        padding: 0;
+    }
+
+    .awardsImg-container {
+        margin   : 0 auto;
+        max-width: 483px;
+    }
+
+    .awards-txt {
+        padding: 0 30px;
+    }
+}

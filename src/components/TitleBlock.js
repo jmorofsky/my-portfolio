@@ -32,21 +32,44 @@ class Block extends React.Component {
         let widthStyle2
 
         if (this.state.windowWidth > 600) {
-            widthStyle = this.props.lineOne.length * 4.3
+            if(this.props.lineTwo.length === 9) {
+                widthStyle = 46.5
+                widthStyle2 = 36.63
+            }
 
-            if (this.props.lineOne.length > this.props.lineTwo.length) {
-                widthStyle2 = (this.props.lineTwo.length / 1.2) + widthStyle - 17.5
-            } else {
-                widthStyle2 = (this.props.lineTwo.length / 1.2) + widthStyle - 27.4
+            if(this.props.lineTwo.length === 23) {
+                widthStyle = 38
+                widthStyle2 = 29.9
+            }
+
+            if(this.props.lineTwo.length === 24) {
+                widthStyle = 34
+                widthStyle2 = 26.7
+            }
+
+            if(this.props.lineTwo.length === 27) {
+                widthStyle = 38
+                widthStyle2 = 29.89
             }
         } else {
-                widthStyle2 = this.props.lineTwo.length
+                if(this.props.lineTwo.length === 9) {
+                    widthStyle = 25
+                    widthStyle2 = 22.5
+                }
 
-                if (this.props.lineOne.length > this.props.lineTwo.length) {
-                    widthStyle2 = this.props.lineOne.length + 11.5
-                    widthStyle = (this.props.lineOne.length / 4) + widthStyle2 - 0.2
-                } else {
-                    widthStyle = widthStyle2 + (this.props.lineOne.length / 50) + 2.5
+                if(this.props.lineTwo.length === 23) {
+                    widthStyle = 25.6
+                    widthStyle2 = 23
+                }
+
+                if(this.props.lineTwo.length === 24) {
+                    widthStyle = 26.7
+                    widthStyle2 = 24
+                }
+
+                if(this.props.lineTwo.length === 27) {
+                    widthStyle = 30
+                    widthStyle2 = 27
                 }
         }
 

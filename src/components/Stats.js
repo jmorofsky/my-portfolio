@@ -72,7 +72,7 @@ class Stats extends React.Component {
 
     render() {
         return (
-            <div className='stats-bg'>
+            <div className='gray-bg'>
                 <div className='stats-header'>
                     <TitleBlock lineOne='// Stats' lineTwo='Who doesn&apos;t like numbers' />
 
