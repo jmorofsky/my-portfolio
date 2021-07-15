@@ -12,7 +12,7 @@ class Block extends React.Component {
         this.handleResize = this.handleResize.bind(this)
     }
 
-    handleResize = (e) => {
+    handleResize = () => {
         this.setState({ windowWidth: window.innerWidth })
     }
 
@@ -29,25 +29,37 @@ class Block extends React.Component {
         let widthStyle
         let lineOneStyle
         let lineTwoStyle
+        let widthStyle2
 
         if (this.state.windowWidth > 600) {
-            this.props.lineOne.length > this.props.lineTwo.length ?
-                widthStyle = this.props.lineOne.length : widthStyle = this.props.lineTwo.length - 16
+            widthStyle = this.props.lineOne.length * 4.3
+
+            if (this.props.lineOne.length > this.props.lineTwo.length) {
+                widthStyle2 = (this.props.lineTwo.length / 1.2) + widthStyle - 17.5
+            } else {
+                widthStyle2 = (this.props.lineTwo.length / 1.2) + widthStyle - 27.4
+            }
         } else {
-            this.props.lineOne.length > this.props.lineTwo.length ?
-                widthStyle = this.props.lineOne.length : widthStyle = this.props.lineTwo.length - 12.9
+                widthStyle2 = this.props.lineTwo.length
+
+                if (this.props.lineOne.length > this.props.lineTwo.length) {
+                    widthStyle2 = this.props.lineOne.length + 11.5
+                    widthStyle = (this.props.lineOne.length / 4) + widthStyle2 - 0.2
+                } else {
+                    widthStyle = widthStyle2 + (this.props.lineOne.length / 50) + 2.5
+                }
         }
 
         const bigStyle = {
             backgroundColor: '#000',
-            width: widthStyle * 37,
+            width: widthStyle + 'ch',
             paddingLeft: 15 + 'px',
             paddingRight: 10 + 'px',
             transition: 'all .7s ease-in-out'
         }
 
         const lineTwoBigStyle = {
-            width: widthStyle * 37 - 5,
+            width: widthStyle2 + 'ch',
             paddingLeft: 15 + 'px',
             paddingRight: 15 + 'px',
             transition: 'all .7s ease-in-out'
@@ -55,7 +67,7 @@ class Block extends React.Component {
 
         const smallStyle = {
             backgroundColor: '#000',
-            width: widthStyle * 21,
+            width: widthStyle + 'ch',
             paddingLeft: 15 + 'px',
             paddingRight: 10 + 'px',
             transition: 'all .7s ease-in-out'
@@ -63,7 +75,7 @@ class Block extends React.Component {
 
         const lineTwoSmallStyle = {
             backgroundColor: '#000',
-            width: widthStyle * 21,
+            width: widthStyle2 + 'ch',
             paddingLeft: 15 + 'px',
             paddingRight: 10 + 'px',
             transition: 'all .7s ease-in-out'
