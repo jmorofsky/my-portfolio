@@ -10,7 +10,7 @@ a {
 .about-me-container {
     display        : flex;
     justify-content: center;
-    padding        : 15px 5vw 3vw 0;
+    padding        : 30px 5vw 3vw 0;
     margin-left    : 0;
 }
 

@@ -8,7 +8,7 @@ class AboutMe extends React.Component {
     render() {
         return (
             <div className="bg" id="about-me">
-                <TitleBlock lineOne='// About Me' lineTwo='I ♥ code!' />
+                <TitleBlock lineOne='// About Me' lineTwo='I ♥ code!             ' />
                 <div className="about-me-container">
                     <Parallax strength={150} bgImage={fpu} className='fpu'>
                             <div className='parallax'></div>

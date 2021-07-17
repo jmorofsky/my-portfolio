@@ -1,14 +1,15 @@
 .typing-effect-title {
-    font-family  : 'LiberationMono';
-    color        : #fff;
-    animation    : typing 0.75s steps(13), blink .1s step-end 8 alternate;
-    white-space  : nowrap;
-    overflow     : hidden;
-    border-right : 0.1em solid transparent;
-    padding      : 15px 5px 5px 5px;
-    margin-bottom: 0;
-    font-size    : 60px;
-    transition   : all .7s ease-in-out;
+    font-family        : 'LiberationMono';
+    color              : #fff;
+    animation          : popIn 215ms, typing 0.75s steps(13) 200ms, blink .1s step-end 200ms 8 alternate;
+    animation-fill-mode: forwards;
+    white-space        : nowrap;
+    overflow           : hidden;
+    border-right       : 0.1em solid transparent;
+    padding            : 15px 5px 5px 5px;
+    margin-bottom      : 0;
+    font-size          : 60px;
+    transition         : all .7s ease-in-out;
 }
 
 .typing-effect-title-static {
@@ -24,39 +25,27 @@
 }
 
 .lineTwo {
-    font-family     : 'Source', monospace;
-    color           : #fff;
-    background-color: #000;
-    margin-top      : 0;
-    text-align      : left;
-    padding         : 0 0 15px 5px;
-    font-size       : 18px;
-    transition      : all .7s ease-in-out;
-}
-
-@keyframes typing {
-    0% {
-        opacity: 100%;
-    }
-
-    100% {
-        opacity: 100%;
-    }
-
-    from {
-        width: 0;
-    }
-}
-
-@keyframes blink {
-    50% {
-        border-color: #fff;
-    }
+    font-family: 'Source', monospace;
+    color      : #fff;
+    margin-top : 0;
+    text-align : left;
+    padding    : 0 0 15px 5px;
+    font-size  : 18px;
+    transition : all .7s ease-in-out;
 }
 
 .titleBlock {
-    margin-top : 7vh;
-    margin-left: 0;
+    margin-top      : 7vh;
+    margin-left     : 0;
+    background-color: #000;
+    transition      : width .7s ease-in-out;
+}
+
+.logic {
+    opacity: 0;
+    height: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 @media screen and (min-width: 1300px) {
@@ -76,5 +65,31 @@
 
     .lineTwo {
         font-size: 16px;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: #fff;
+    }
+}
+
+@keyframes popIn {
+    0% {
+        opacity: 0;
+    }
+
+    99% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }

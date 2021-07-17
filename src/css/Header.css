@@ -17,22 +17,23 @@ div {
 }
 
 .typing-effect {
-  width        : 13ch;
-  animation    : typing 1.25s steps(13), blink .1s step-end 14 alternate;
-  white-space  : nowrap;
-  overflow     : hidden;
-  border-right : 0.1em solid transparent;
-  font-family  : 'LiberationMono';
-  font-size    : 125px;
-  color        : #fff;
-  margin-top   : calc(100vh - 870px);
-  margin-bottom: 0;
+  width              : 970px;
+  animation          : popIn 215ms, typing 1.25s steps(13) 200ms, blink .1s step-end 200ms 14 alternate;
+  animation-fill-mode: forwards;
+  white-space        : nowrap;
+  overflow           : hidden;
+  border-right       : 0.1em solid transparent;
+  font-family        : 'LiberationMono';
+  font-size          : 125px;
+  color              : #fff;
+  margin-top         : calc(100vh - 870px);
+  margin-bottom      : 0;
 }
 
 .typing-effect-small {
   opacity            : 0;
   width              : 18ch;
-  animation          : typing 1.25s steps(18), blink .1s step-end 14 alternate;
+  animation          : popIn 1ms, typing 1.25s steps(18) 200ms, blink .1s step-end 200ms 14 alternate;
   animation-delay    : 2s;
   animation-fill-mode: forwards;
   white-space        : nowrap;
@@ -95,16 +96,16 @@ div {
 }
 
 .arrow {
-  opacity               : 0;
-  margin                : 0 auto;
-  position              : absolute;
-  bottom                : 35px;
-  left                  : 0;
-  right                 : 0;
-  margin-top            : 35px;
-  animation             : fadeIn 1.5s 3.75s steps(50);
-  animation-fill-mode   : forwards;
-  width                 : 50px;
+  opacity            : 0;
+  margin             : 0 auto;
+  position           : absolute;
+  bottom             : 35px;
+  left               : 0;
+  right              : 0;
+  margin-top         : 35px;
+  animation          : fadeIn 1.5s 3.75s steps(50);
+  animation-fill-mode: forwards;
+  width              : 50px;
 }
 
 .preview {
@@ -138,14 +139,6 @@ div {
 }
 
 @keyframes typing {
-  0% {
-    opacity: 100%;
-  }
-
-  100% {
-    opacity: 100%;
-  }
-
   from {
     width: 0;
   }
@@ -186,5 +179,19 @@ div {
 
   100% {
     transform: scale(1)
+  }
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+  }
+
+  99% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
