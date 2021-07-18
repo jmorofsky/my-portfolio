@@ -128,6 +128,12 @@ div {
   }
 }
 
+@media screen and (max-width: 970px) {
+  .typing-effect {
+    width: 93vw;
+  }
+}
+
 @media screen and (max-width: 1050px) {
   .typing-effect {
     font-size: 12vw;

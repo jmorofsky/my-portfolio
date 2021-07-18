@@ -16,6 +16,26 @@ class Stats extends React.Component {
         this.displayStats = this.displayStats.bind(this)
         this.countUp = this.countUp.bind(this)
         this.handleClick = this.handleClick.bind(this)
+
+        // --- todo ---
+        // fix comma after id 8
+        // remove spaces in key names
+        // make refresh animation play when in viewport for first time
+        fetch("https://www.googleapis.com/storage/v1/b/jasonmorofsky/o/statsData.json")
+            .then(res => res.json())
+            .then(
+                (result) => {
+                    let url = result.mediaLink
+
+                    fetch(url)
+                        .then(res => res.json())
+                        .then(
+                            (result) => {
+                                console.log(result)
+                            }
+                        )
+                }
+            )
     }
 
     displayStats() {
@@ -64,7 +84,7 @@ class Stats extends React.Component {
     }
 
     handleClick() {
-        if(this.state.isLoading === false) {
+        if (this.state.isLoading === false) {
             setTimeout(() => this.displayStats(), 1)
             setTimeout(() => this.countUp(), 1)
         }

@@ -116,6 +116,6 @@ def fetchstats(event, context):
           )
 
 
-     upload_blob('jasonmorofsky', '/tmp/stats.csv', 'src/components/statsData.js')
+     upload_blob('jasonmorofsky', '/tmp/stats.csv', 'statsData.json')
      os.remove('/tmp/stats.csv')
      print('finished')
