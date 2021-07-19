@@ -2,15 +2,15 @@ import React from 'react'
 import '../css/Stats.css'
 import TitleBlock from "./TitleBlock"
 import refreshArrow from '../images/refreshArrow.png'
-import stats from './statsData'
 
 class Stats extends React.Component {
     constructor() {
         super()
         this.state = {
-            stats: stats,
-            randomStats: stats,
-            isLoading: false
+            stats: [],
+            randomStats: [],
+            isLoading: false,
+            waiting: true
         }
 
         this.displayStats = this.displayStats.bind(this)
@@ -18,8 +18,6 @@ class Stats extends React.Component {
         this.handleClick = this.handleClick.bind(this)
 
         // --- todo ---
-        // fix comma after id 8
-        // remove spaces in key names
         // make refresh animation play when in viewport for first time
         fetch("https://www.googleapis.com/storage/v1/b/jasonmorofsky/o/statsData.json")
             .then(res => res.json())
@@ -31,7 +29,9 @@ class Stats extends React.Component {
                         .then(res => res.json())
                         .then(
                             (result) => {
-                                console.log(result)
+                                setTimeout(() => this.setState({
+                                    stats: result.stats, randomStats: result.stats, waiting: false
+                                }), 900)
                             }
                         )
                 }
@@ -91,6 +91,23 @@ class Stats extends React.Component {
     }
 
     render() {
+        if (this.state.waiting === true) {
+            return (
+                <div className='gray-bg'>
+                    <div className='stats-header'>
+                        <TitleBlock lineOne='// Stats' lineTwo='Who doesn&apos;t like numbers' />
+
+                        <img
+                            src={refreshArrow}
+                            alt='Get random stats'
+                            className='refreshArrowLoading'
+                            title='Get random stats'
+                            onClick={() => this.handleClick()}
+                        />
+                    </div>
+                </div>
+            )
+        }
         return (
             <div className='gray-bg'>
                 <div className='stats-header'>

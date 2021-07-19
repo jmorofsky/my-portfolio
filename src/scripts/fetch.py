@@ -1,7 +1,6 @@
 import base64
 import requests
 import os
-import csv
 from datetime import datetime
 from pytz import timezone
 from google.cloud import storage
@@ -77,21 +76,32 @@ def fetchstats(event, context):
      stats.append(stat(8, "Last update: ", formattedDate))
 
      # write stats data to file
+     i = 0
      with open('/tmp/stats.csv', 'w') as f:
-          writer = csv.writer(f, delimiter=' ')
-          writerNoQuote = csv.writer(f, delimiter=' ', quoting=csv.QUOTE_NONE, escapechar=' ')
-          writerNoQuote.writerow(['let stats = ['])
+          f.write('{\n')
+          f.write('\t"stats": [')
           for item in stats:
-               writer.writerow(['{'])
-               writerNoQuote.writerow(['id:'])
-               writer.writerow([item.id])
-               writerNoQuote.writerow([',name:'])
-               writer.writerow([item.name])
-               writerNoQuote.writerow([',value:'])
-               writer.writerow([item.value])
-               writer.writerow(['},'])
-          writer.writerow([']'])
-          writerNoQuote.writerow(['export default stats'])
+               i += 1
+
+               f.write('\n\t\t{')
+               f.write(' "id": ')
+               f.write(str(item.id))
+               f.write(', "name": "')
+               f.write(item.name)
+               f.write('", "value": ')
+               if i == 9:
+                    f.write('"')
+                    f.write(str(item.value))
+                    f.write('"')
+               else:
+                    f.write(str(item.value))
+               
+               if i == 9:
+                    f.write(' }')
+               else:
+                    f.write(' },')
+          f.write('\n\t]')
+          f.write('\n}')
 
      # upload stats data to gcloud bucket
      def upload_blob(bucket_name, source_file_name, destination_blob_name):
