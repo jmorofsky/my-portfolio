@@ -17,8 +17,6 @@ class Stats extends React.Component {
         this.countUp = this.countUp.bind(this)
         this.handleClick = this.handleClick.bind(this)
 
-        // --- todo ---
-        // make refresh animation play when in viewport for first time
         fetch("https://www.googleapis.com/storage/v1/b/jasonmorofsky/o/statsData.json")
             .then(res => res.json())
             .then(
