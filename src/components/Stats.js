@@ -100,7 +100,6 @@ class Stats extends React.Component {
                             alt='Get random stats'
                             className='refreshArrowLoading'
                             title='Get random stats'
-                            onClick={() => this.handleClick()}
                         />
                     </div>
                 </div>

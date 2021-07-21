@@ -37,7 +37,7 @@
 .refreshArrowLoading {
     width           : 48px;
     height          : 48px;
-    margin-right    : 26.6vw;
+    margin-right    : 5vw;
     margin-bottom   : max(2vh, 35px);
     border          : 3px solid #363636;
     background-color: #363636;
@@ -103,6 +103,21 @@
 @media screen and (min-width: 1350px) {
     .refreshArrow {
         margin-right: calc(50vw - 600px);
+    }
+
+    .refreshArrowLoading {
+        margin-right: calc(50vw - 600px);
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .statsItem {
+        margin-left: 0;
+        width      : 100%;
+    }
+
+    .stats-container {
+        width: 100%;
     }
 }
 

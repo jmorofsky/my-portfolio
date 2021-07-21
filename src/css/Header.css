@@ -144,6 +144,24 @@ div {
   }
 }
 
+@media screen and (max-width: 450px) {
+  header {
+    min-height: 250px;
+  }
+
+  .contact-buttons {
+    margin: 0 5vw;
+  }
+
+  .linkedIn {
+    margin: 0 5vw;
+  }
+
+  .preview {
+    max-width: 100%;
+  }
+}
+
 @keyframes typing {
   from {
     width: 0;
