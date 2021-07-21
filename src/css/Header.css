@@ -1,7 +1,7 @@
 header {
   background-color: #363636;
   height          : 100vh;
-  min-height      : 410px;
+  min-height      : calc(250px + 12vw);
   padding-bottom  : 13px;
   position        : relative;
 }
@@ -145,10 +145,6 @@ div {
 }
 
 @media screen and (max-width: 450px) {
-  header {
-    min-height: 250px;
-  }
-
   .contact-buttons {
     margin: 0 5vw;
   }
