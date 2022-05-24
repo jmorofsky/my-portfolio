@@ -11,19 +11,37 @@ class AboutMe extends React.Component {
                 <TitleBlock lineOne='// About Me' lineTwo='I ♥ code!             ' />
                 <div className="about-me-container">
                     <Parallax strength={150} bgImage={fpu} className='fpu'>
-                            <div className='parallax'></div>
+                        <div className='parallax'></div>
                     </Parallax>
                     <div className='txt-container'>
-                        <p className='about-p'>&emsp; Hi, I’m Jason Morofsky, a Computer Science graduate
-                            from <a href='https://floridapoly.edu/'>Florida Polytechnic University.</a> I love all
-                            things technology, especially if it has to do with software development and
-                            programming.</p>
-                        <p className='about-p'>&emsp; That being said, front-end development is my passion. I love
-                            being able to express my creativity through sleek, efficient, and beautiful user
-                            experience design.</p>
-                        <p className='about-p'>&emsp; With my experience in React, Node, and RESTful APIs as well
-                            as knowledge of agile methodology and workflow management tools like Jira, I know I
-                            will be an asset to the front-end development of any application.</p>
+                        <p className='about-p'>&emsp; Hi, I’m Jason Morofsky! I love all
+                            things technology, ranging from video games and VR, to programming, to
+                            computer hardware.</p>
+                        <p className='about-p'>&emsp; I graduated in 2021 with a B.S. in Computer Science.
+                            I have worked as a quality assurance engineer and have experience with software
+                            development.</p>
+                        <p className='about-p'>&emsp; I have an attention to detail, and love to express my
+                            creativity through both finding clever solutions to problems and beautiful,
+                            functional design.</p>
+                    </div>
+                </div>
+                <div className="history-container">
+                    <div className="history-item">
+                        <p className="history-header">Education</p>
+                        <p className="date">MAY 2021</p>
+                        <p className="subtext"><strong>FLORIDA POLYTECHNIC UNIVERSITY</strong></p>
+                        <p className="subtext2" style={{ marginBottom: "25px" }}>
+                            B.S. Computer Science: Cybersecurity</p>
+
+                        <p className="date">MAY 2017</p>
+                        <p className="subtext"><strong>CORAL GLADES HIGH SCHOOL</strong></p>
+                        <p className="subtext2">High School Diploma</p>
+                    </div>
+                    <div className="history-item">
+                        <p className="history-header">Employment</p>
+                        <p className="date">September 2021-Present</p>
+                        <p className="subtext"><strong>Quality Assurance Engineer</strong></p>
+                        <p className="subtext2">AirFind</p>
                     </div>
                 </div>
             </div>
@@ -32,3 +50,7 @@ class AboutMe extends React.Component {
 }
 
 export default AboutMe
+
+//update skills section
+// add tools section Heres what ive worked with
+//replace fpu pic w headshot

@@ -38,6 +38,48 @@ a {
     text-align : justify;
 }
 
+.history-container {
+    display        : flex;
+    justify-content: space-around;
+}
+
+.history-item {
+    width: 330px;
+    color: #fff;
+}
+
+.history-header {
+    font-family     : 'LiberationMono';
+    font-size       : 40px;
+    color           : #fff;
+    background-color: #731c2b;
+    padding         : 10px 10px 5px;
+    margin-bottom   : 35px;
+}
+
+.date {
+    padding    : 0 0 0 7px;
+    font-family: 'LiberationMono';
+    font-size  : 24px;
+    color      : #dea4a4;
+    margin     : 0;
+    text-align : left;
+}
+
+.subtext {
+    text-align: left;
+    margin    : 0;
+    padding   : 0 0 0 7px;
+}
+
+.subtext2 {
+    text-align : left;
+    margin     : 0;
+    padding    : 0 0 0 7px;
+    font-family: 'KoHo', sans-serif;
+    font-size  : 18px;
+}
+
 @media screen and (min-width: 1300px) {
     .about-me-container {
         margin-left : calc(50vw - 650px);
@@ -60,6 +102,11 @@ a {
     .txt-container {
         padding: 0 30px;
     }
+
+    .history-container {
+        flex-direction: column;
+        align-items   : center;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -67,5 +114,4 @@ a {
         min-width: 0;
         max-width: 100%;
     }
-
 }
