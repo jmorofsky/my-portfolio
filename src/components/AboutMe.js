@@ -22,7 +22,10 @@ class AboutMe extends React.Component {
                             development.</p>
                         <p className='about-p'>&emsp; I have an attention to detail, and love to express my
                             creativity through both finding clever solutions to problems and beautiful,
-                            functional design.</p>
+                            functional design. Check out this other website I created: 
+                            <a href="https://meghanexplainsmedicare.com">Medicare with Meghan Morofsky
+                            </a>.
+                        </p>
                     </div>
                 </div>
                 <div className="history-container">
@@ -40,8 +43,8 @@ class AboutMe extends React.Component {
                     <div className="history-item">
                         <p className="history-header">Employment</p>
                         <p className="date">September 2021-Present</p>
-                        <p className="subtext"><strong>Quality Assurance Engineer</strong></p>
-                        <p className="subtext2">AirFind</p>
+                        <p className="subtext"><strong>AIRFIND</strong></p>
+                        <p className="subtext2">Quality Assurance Engineer</p>
                     </div>
                 </div>
             </div>

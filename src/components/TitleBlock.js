@@ -34,7 +34,7 @@ class Block extends React.Component {
                 return (
                     <div ref={this.props.forwardedRef}>
                         <div className='titleBlock' style={{
-                            width: (width * 4.4) + 'ch'
+                            width: (width * 4.5) + 'ch'
                         }}>
                             <div>
                                 <h1 className='typing-effect-title'
@@ -50,7 +50,7 @@ class Block extends React.Component {
             } return (
                 <div ref={this.props.forwardedRef}>
                     <div className='titleBlock' style={{
-                        width: (width * 4.4) + 'ch'
+                        width: (width * 4.5) + 'ch'
                     }}>
                         <div>
                             <h1 className='typing-effect-title-static' style={{
