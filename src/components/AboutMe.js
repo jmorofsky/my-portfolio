@@ -55,5 +55,4 @@ class AboutMe extends React.Component {
 export default AboutMe
 
 //update skills section
-// add tools section Heres what ive worked with
 //replace fpu pic w headshot
