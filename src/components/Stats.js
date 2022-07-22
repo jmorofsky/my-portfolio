@@ -80,7 +80,7 @@ class Statistics extends React.Component {
         for (let i = 0; i < 4; i++) {
             let interval = setInterval(() => {
                 switch (true) {
-                    case (maxVals[i] <= 50):
+                    case (maxVals[i] <= 99):
                         if (items[i].value < maxVals[i]) {
                             items[i].value += 1
                         } else {
