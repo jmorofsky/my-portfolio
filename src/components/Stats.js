@@ -2,15 +2,17 @@ import React from 'react'
 import '../css/Stats.css'
 import TitleBlock from "./TitleBlock"
 import refreshArrow from '../images/refreshArrow.png'
+import handleViewport from "react-in-viewport"
 
-class Stats extends React.Component {
+class Statistics extends React.Component {
     constructor() {
         super()
         this.state = {
             stats: [],
             randomStats: [],
             isLoading: false,
-            waiting: true
+            waiting: true,
+            played: false
         }
 
         this.displayStats = this.displayStats.bind(this)
@@ -29,7 +31,7 @@ class Stats extends React.Component {
                             (result) => {
                                 setTimeout(() => this.setState({
                                     stats: result.stats, randomStats: result.stats, waiting: false
-                                }), 900)
+                                }), 1800)
                             }
                         )
                 }
@@ -37,9 +39,11 @@ class Stats extends React.Component {
     }
 
     displayStats() {
+        this.setState({ isLoading: true })
         let stats_array = []
         let selected
         let items = this.state.stats
+        let copy = []
         for (let i = 0; i < items.length - 1; i++)
             items[i].shown = 0
 
@@ -54,37 +58,95 @@ class Stats extends React.Component {
                 }
             }
         }
-
-        this.setState({ randomStats: stats_array })
+        copy = JSON.parse(JSON.stringify(stats_array))
+        for (let i = 0; i < 4; i++) {
+            copy[i].value = 0
+        }
+        this.setState({ randomStats: copy })
+        setTimeout(() => { this.setState({ randomStats: stats_array }) }, 300)
     }
 
     countUp() {
-        this.setState({ isLoading: true })
         let maxVals = []
         for (let i = 0; i < 4; i++) {
             maxVals[i] = JSON.parse(JSON.stringify(this.state.randomStats[i].value))
         }
-        let items = this.state.randomStats
 
-        for (let i = 0; i < 20; i++) {
-            setTimeout(() => {
-                for (let j = 0; j < 4; j++) {
-                    if (i === 19) {
-                        items[j].value = maxVals[j]
-                        this.setState({ isLoading: false })
-                    } else {
-                        items[j].value = Math.trunc(maxVals[j] / (20 - i))
-                    }
+        let items = this.state.randomStats
+        for (let i = 0; i < 4; i++) {
+            items[i].value = 0
+        }
+
+        for (let i = 0; i < 4; i++) {
+            let interval = setInterval(() => {
+                switch (true) {
+                    case (maxVals[i] <= 50):
+                        if (items[i].value < maxVals[i]) {
+                            items[i].value += 1
+                        } else {
+                            items[i].value = maxVals[i]
+                        }
+
+                        if (items[0].value === maxVals[0] && items[1].value === maxVals[1]
+                            && items[2].value === maxVals[2] && items[3].value === maxVals[3]) {
+                            this.setState({ isLoading: false })
+                            clearInterval(interval)
+                        }
+                        this.setState({ randomStats: items })
+                        break
+
+                    case (maxVals[i] <= 10000):
+                        if (items[i].value < maxVals[i]) {
+                            items[i].value += 51
+                        } else {
+                            items[i].value = maxVals[i]
+                        }
+
+                        if (items[0].value === maxVals[0] && items[1].value === maxVals[1]
+                            && items[2].value === maxVals[2] && items[3].value === maxVals[3]) {
+                            this.setState({ isLoading: false })
+                            clearInterval(interval)
+                        }
+                        this.setState({ randomStats: items })
+                        break
+
+                    case (maxVals[i] <= 50000):
+                        if (items[i].value < maxVals[i]) {
+                            items[i].value += 398
+                        } else {
+                            items[i].value = maxVals[i]
+                        }
+
+                        if (items[0].value === maxVals[0] && items[1].value === maxVals[1]
+                            && items[2].value === maxVals[2] && items[3].value === maxVals[3]) {
+                            this.setState({ isLoading: false })
+                            clearInterval(interval)
+                        }
+                        this.setState({ randomStats: items })
+                        break
+
+                    default:
+                        if (items[i].value < maxVals[i]) {
+                            items[i].value += 797
+                        } else {
+                            items[i].value = maxVals[i]
+                        }
+
+                        if (items[0].value === maxVals[0] && items[1].value === maxVals[1]
+                            && items[2].value === maxVals[2] && items[3].value === maxVals[3]) {
+                            this.setState({ isLoading: false })
+                            clearInterval(interval)
+                        }
+                        this.setState({ randomStats: items })
                 }
-                this.setState({ randomStats: items })
-            }, 20 * i)
+            }, 20)
         }
     }
 
     handleClick() {
         if (this.state.isLoading === false) {
             setTimeout(() => this.displayStats(), 1)
-            setTimeout(() => this.countUp(), 1)
+            setTimeout(() => this.countUp(), 305)
         }
     }
 
@@ -105,6 +167,14 @@ class Stats extends React.Component {
                 </div>
             )
         }
+
+        setTimeout(() => {
+            if (this.props.inViewport && this.props.enterCount === 1 && this.state.played === false) {
+                this.handleClick()
+                this.setState({ played: true })
+            }
+        }, 1)
+
         return (
             <div className='gray-bg'>
                 <div className='stats-header'>
@@ -147,5 +217,7 @@ class Stats extends React.Component {
         )
     }
 }
+
+const Stats = handleViewport(Statistics)
 
 export default Stats
