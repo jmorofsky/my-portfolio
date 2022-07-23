@@ -67,7 +67,7 @@ def fetchstats(event, context):
      stats.append(stat(5, 'Languages used in Repos', langs))
 
      stats.append(stat(6, 'Programming Languages', 10))
-     stats.append(stat(7, 'Agile Certification', 1))
+     stats.append(stat(7, 'Certificates', 2))
 
      # get date and time
      tz = timezone('US/Eastern')
