@@ -42,8 +42,13 @@ class AboutMe extends React.Component {
                     </div>
                     <div className="history-item">
                         <p className="history-header">Employment</p>
-                        <p className="date">September 2021-Present</p>
+                        <p className="date">SEPT 2021 - AUG 2022</p>
                         <p className="subtext"><strong>AIRFIND</strong></p>
+                        <p className="subtext2" style={{ marginBottom: "25px" }}>
+                            Quality Assurance Engineer</p>
+
+                        <p className="date">SEPT 2022 - PRESENT</p>
+                        <p className="subtext"><strong>IDEAGEN</strong></p>
                         <p className="subtext2">Quality Assurance Engineer</p>
                     </div>
                 </div>
